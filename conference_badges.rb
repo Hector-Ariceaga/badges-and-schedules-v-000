@@ -12,7 +12,7 @@ def assign_rooms(names)
   names.collect.with_index {|name,index| "Hello, #{name}! You'll be assigned to room #{index +1}!"}
 end
 
-def printer
-  batch_badge_creator(name)
-  assign_rooms.each
+def printer(attendees)
+  batch_badge_creator(attendees)
+  assign_rooms.each(attendees)
 end
